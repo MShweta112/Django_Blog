@@ -6,6 +6,7 @@ from .form import *
 from django.contrib.auth import logout
 
 
+
 def logout_view(request):
     logout(request)
     return redirect('/')
@@ -18,6 +19,7 @@ def home(request):
 
 def login_view(request):
     return render(request, 'login.html')
+
 
 
 def blog_detail(request, slug):
@@ -116,8 +118,12 @@ def blog_delete(request, id):
     return redirect('/see-blog/')
 
 
+
+
 def register_view(request):
     return render(request, 'register.html')
+
+
 
 
 def verify(request, token):
